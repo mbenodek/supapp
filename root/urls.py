@@ -23,4 +23,5 @@ admin.autodiscover()
 urlpatterns = [
     path("", help.views.index, name="index"),
     path('admin/', admin.site.urls),
+
 ]
