@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> Information </h1>
+
+<div class="row" style="width: 500px; margin:0 auto;">
+    <table class="table table-hover table-dark table-sm ">
+        <thead>
+        <tr>
+            <th scope="col" >Name</th>
+            <th scope="col" >Phone Number</th>
+            <th scope="col" >Designation</th>
+        </tr>
+        </thead>
+        {% for information in info%}
+        <div class="col">
+            <tbody>
+            <tr>
+                <td>{{ information.name }}</td>
+                <td>{{ information.designation}}</td>
+                <td>{{ information.phone}}</td>
+            </tr>
+
+        </div>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}
+
