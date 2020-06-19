@@ -1,0 +1,237 @@
+
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- header -->
+<div id="header">
+  <div id="header-container" class="container-12 clearfix">
+    <div id="menu" class="grid-8">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="current_page_item"><a href="blog.html">blog</a></li>
+        <li><a href="xhtml-elements.html">xhtml</a></li>
+      </ul>
+    </div>
+    <!-- searchform *copy/paste this code to place anywhere in the page-->
+    <form method="get" id="searchform" action="#" >
+      <p>
+        <label class="screen-reader-text" for="s">Search for:</label>
+        <input type="text" value="Type Your Search Here" name="s" id="s" />
+        <input type="image" id="searchsubmit" value="search" src="{% static images/searchbutton.png %}"/>
+      </p>
+    </form>
+    <!-- end of searchform -->
+  </div>
+</div>
+<!-- end of header -->
+<div class="clear"></div>
+<!-- main-wrapper -->
+<div id="main-wrapper" class="container-12">
+  <!-- logo -->
+  <div id="logo" class="grid-3">
+    <p class="title"><a href="#">busy</a></p>
+    <p class="tagline">Just Another Website Template</p>
+    <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <span class="more-info"><a href="#">more info</a></span></p>
+  </div>
+  <!-- end of logo -->
+  <!-- featured-post -->
+  <div id="featured-block" class="grid-9">
+    <div id="featured-post">
+      <div id="featured-image">
+        <p><img src="images/guitar.jpg" alt="" width="297" height="163"/></p>
+      </div>
+      <div id="featured-description">
+        <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
+        <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
+        <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod</a> tempor incididunt ut labore et dolore <a href="#">magna</a> aliqua. Ut enim ad minim <a href="#">veniam</a></p>
+        <p><a href="#" class="more-link">read more</a></p>
+      </div>
+    </div>
+  </div>
+  <!-- end of featured post -->
+  <div class="clear"></div>
+  <!-- content -->
+  <h1>This is Your Blog Section</h1>
+  <div id="content" class="grid-8">
+    <div class="recent-post">
+      <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
+      <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
+      <p><img src="images/road.jpg" alt=""/></p>
+      <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetuer adipiscing elit. Donec libero. <a href="#">Suspendisse bibendum</a>. Cras id urna. Morbi tincidunt, orci ac convallis <a href="#">aliquam</a>, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec <a href="#">placerat</a> bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, <a href="#">lorem tellus,</a> eleifend magna, eget fringilla velit <a href="#">magna</a> id neque.</p>
+      <!-- threaded comment -->
+      <h3 id="comments">3 Responses</h3>
+      <ol class="commentlist">
+        <li class="depth-1">
+          <div class="comment-info"> <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" /> <cite> <a href="#">tamad</a> Says: <br />
+            <span class="comment-data"><a href="#">August 27th, 2009 at 8:08 am</a></span> </cite> </div>
+          <div class="comment-text">
+            <p>Comments are great!</p>
+            <div class="reply"> <a class="comment-reply-link" href="#">Reply</a> </div>
+          </div>
+          <ul class="children">
+            <li class="depth-2">
+              <div class="comment-info"> <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" /> <cite> <a href="#">tamad</a> Says: <br />
+                <span class="comment-data"><a href="#">August 27th, 2009 at 8:15 am</a></span> </cite> </div>
+              <div class="comment-text">
+                <p>And here is a threaded comment.</p>
+                <div class="reply"> <a class="comment-reply-link" href="#">Reply</a> </div>
+              </div>
+            </li>
+            <li class="depth-2">
+              <div class="comment-info"> <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" /> <cite> <a href="#">tamad</a> Says: <br />
+                <span class="comment-data"><a href="#">August 27th, 2009 at 8:15 am</a></span> </cite> </div>
+              <div class="comment-text">
+                <p>And here is another threaded comment.</p>
+                <div class="reply"> <a class="comment-reply-link" href="#">Reply</a> </div>
+              </div>
+              <ul class="children">
+                <li class="depth-3">
+                  <div class="comment-info"> <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" /> <cite> <a href="#">tamad</a> Says: <br />
+                    <span class="comment-data"><a href="#">August 27th, 2009 at 8:20 am</a></span> </cite> </div>
+                  <div class="comment-text">
+                    <p>Threaded comments are cool!</p>
+                    <div class="reply"> <a class="comment-reply-link" href="#">Reply</a> </div>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="thread-alt depth-1">
+          <div class="comment-info"> <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" /> <cite> <a href="#">tamad</a> Says: <br />
+            <span class="comment-data"><a href="#">August 27th, 2009 at 8:30 am</a></span> </cite> </div>
+          <div class="comment-text">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum.</p>
+            <div class="reply"> <a class="comment-reply-link" href="#">Reply</a> </div>
+          </div>
+          <ul class="children">
+            <li class="depth-2">
+              <div class="comment-info"> <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" /> <cite> <a href="#">tamad</a> Says: <br />
+                <span class="comment-data"><a href="#">August 27th, 2009 at 8:35 am</a></span> </cite> </div>
+              <div class="comment-text">
+                <p>Donec libero. Suspendisse bibendum.</p>
+                <div class="reply"> <a class="comment-reply-link" href="#">Reply</a> </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="depth-1">
+          <div class="comment-info"> <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" /> <cite> <a href="#">tamad</a> Says: <br />
+            <span class="comment-data"><a href="#">August 27th, 2009 at 9:08 am</a></span> </cite> </div>
+          <div class="comment-text">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius lorem, eu posuere nunc justo tempus leo.</p>
+            <div class="reply"> <a class="comment-reply-link" href="#">Reply</a> </div>
+          </div>
+          <ul class="children">
+            <li class="depth-2">
+              <div class="comment-info"> <img alt="" src="images/gravatar.jpg" class="avatar" height="40" width="40" /> <cite> <a href="#">tamad</a> Says: <br />
+                <span class="comment-data"><a href="#">August 27th, 2009 at 9:18 am</a> </span> </cite> </div>
+              <div class="comment-text">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                <div class="reply"> <a class="comment-reply-link" href="#">Reply</a> </div>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <!-- respond -->
+      <div id="respond">
+        <h3>Leave a Reply</h3>
+        <form action="#" method="post" id="commentform">
+          <p>
+            <label for="name">Name (required)</label>
+            <br />
+            <input id="name" name="name" value="Your Name" type="text" tabindex="1" />
+          </p>
+          <p>
+            <label for="email">Email Address (required)</label>
+            <br />
+            <input id="email" name="email" value="Your Email" type="text" tabindex="2" />
+          </p>
+          <p>
+            <label for="website">Website</label>
+            <br />
+            <input id="website" name="website" value="Your Website" type="text" tabindex="3" />
+          </p>
+          <p>
+            <label for="message">Your Message</label>
+            <br />
+            <textarea id="message" name="message" rows="10" cols="20" tabindex="4"></textarea>
+          </p>
+          <p class="no-border">
+            <input class="button" type="submit" value="Submit Comment" tabindex="5" />
+          </p>
+        </form>
+      </div>
+      <!-- end of respond -->
+      <!-- end of threaded comment -->
+    </div>
+  </div>
+  <!-- end of content -->
+  <!-- sidebar -->
+  <div id="sidebar" class="grid-4">
+    <div class="sidebar-container">
+      <h3>Donate</h3>
+      <p>If you think you like this one, you might want to donate any amount</p>
+    </div>
+    <div class="sidebar-container">
+      <h3>Sponsors</h3>
+      <ul>
+        <li><a href="#">TemplateWorld</a>
+          <ul>
+            <li>High Quality Premium Templates</li>
+            <li>All Templates for $49.95</li>
+            <li>6 months access</li>
+          </ul>
+        </li>
+        <li><a href="#">4templates</a>
+          <ul>
+            <li>High Quality Premium Templates</li>
+            <li>Ready to use, Royalty free</li>
+            <li>As low as $4.99</li>
+          </ul>
+        </li>
+        <li><a href="#">Fotolia</a>
+          <ul>
+            <li>Largest collection of stock photos</li>
+            <li>Starting at $0.14</li>
+          </ul>
+        </li>
+        <li><a href="#">HostGator</a>
+          <ul>
+            <li>Premium WebHosting</li>
+            <li>1 month Hosting trial for $0.01</li>
+            <li>Use code <strong>HGC25</strong></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="sidebar-container">
+      <h3>Friends</h3>
+      <ul>
+        <li><a href="#">wpport</a>
+          <ul>
+            <li>Ported and custom wordpress themes</li>
+          </ul>
+        </li>
+        <li><a href="#">Tamad.Net</a>
+          <ul>
+            <li>More minimalist website template</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- end of sidebar -->
+  <div class="clear"></div>
+  <!-- footer -->
+  <div id="footer">
+    <p>&copy; Copyright 2009 <a href="#">Name Here</a> - All Rights Reserved | Design by <a href="http://tamad.net">Tamad.Net</a></p>
+  </div>
+  <!-- end of footer -->
+</div>
+<!-- end of main-wrapper -->
+{% endblock %}

@@ -9,9 +9,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
     <title>Hello, There!</title>
+
+
   </head>
+        {% load static %}
+
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'style.css' %}" />
   <body>
-   <H1> Teesting </H1>
    {% block content %}
 
    {% endblock %}

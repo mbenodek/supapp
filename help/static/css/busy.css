@@ -1,0 +1,368 @@
+/*---------------------------- Global Settings -----------------------------*/
+
+body {background:#0d0d0d url(../images/body-bg.gif);
+		 font: 12px/150% 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+		 color: #929192;
+		 padding:20px 0;}
+		 
+/* headings */
+
+h1, h2, h3 {font-family:georgia, serif;
+					 font-size:1.5em;}
+
+h1 {padding:10px;
+	 margin-bottom:10px;
+	 background:#050204;
+	 border:1px solid #242424;}
+
+/* images */	 
+
+img {border:10px solid #1d1a1c;}
+		 
+/* ------------------------------ xHTML Elements ---------------------------*/
+
+/* code */
+code {margin:3px 0;
+  	 padding:20px;
+  	 text-align:left;
+  	 display:block;
+  	 overflow:auto;
+  	 /* white-space: pre; */
+  	 border:1px solid #242424;
+		 background-color:#0a0605;}
+		 
+/* Lists */
+.recent-post ul, ol {
+	margin: 10px 20px;
+	padding: 0 20px;
+}
+.recent-post ul { list-style: disc; }
+ol { list-style: decimal; }
+
+.recent-post dt {
+  font-weight: bold;
+  color: #6f892c;
+}
+.recent-post dd {
+  padding-left: 20px; 
+}
+
+.recent-post dl { margin: 10px 20px; }
+
+/* acronym */
+		 
+acronym {cursor:help;
+				border-bottom:1px dotted #555;}
+
+/* blockquote */
+blockquote {margin:10px 20px;
+ 					 padding:20px 35px;  
+   				 border:1px solid #251a14;
+					 background:#0a0605 url(../images/quote.gif) no-repeat 5px 5px;
+					 font-weight:normal;
+					 font-style:italic;
+					 font-size:18px;
+					 line-height:1.25em;
+					 font-family: Georgia, 'Times New Roman', Times, Serif;}
+
+/* table elements */
+
+table {border-collapse:collapse;
+			margin:10px 20px;}
+th, td {text-align:left;
+			 border-width: 1px;
+			 border-style: solid;}
+th {background-color: #1d1a1c; 
+	 padding:.8em 1em;
+	 border:1px solid #242424;	
+	 font-weight:bold;
+	 color:#fff;}
+td {border-color: #242424;
+	 padding:.7em 1em;}
+
+/* anchor link */		 
+
+a {color:#f0f0f0;
+	text-decoration:none;}
+	
+a:hover {color:#929192;}
+
+a.more-link {padding:5px 10px;
+						margin-top:10px;
+						background:#a89907 url(../images/readmore-normal.jpg) top repeat-x;
+						font-weight:bold;
+						color:#fff;
+						text-transform:uppercase;
+						display:block;
+						float:left;
+						text-transform:uppercase;
+						font-size:11px;}
+						
+a:hover.more-link {background:#ffc75e url(../images/readmore-hover.jpg) top repeat-x;
+									color:#fff;}	
+	
+/* block background */
+
+#logo, #featured-block, #content, #sidebar, #footer {background:#050204;
+				 								 														border:1px solid #242424;
+																										margin-bottom:10px;}
+																										
+/*image alignment classes*/
+
+img.alignright {float:right; 
+							 margin:1em 0 1em 1em;}
+img.alignleft {float:left; 
+							margin:1em 1em 1em 0;}
+img.aligncenter {display: block; 
+								margin-left: auto; 
+								margin-right: auto;}
+a img.alignright {float:right; 
+								 margin:1em 0 1em 1em;}
+a img.alignleft {float:left; 
+								margin:1em 1em 1em 0;}
+a img.aligncenter {display: block; 
+									margin-left: auto; 
+									margin-right: auto;}
+																						
+/* float clearer */
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+/* grid system */
+
+.container-12 {width:974px;
+							padding:0 10px;
+							margin:auto;}
+
+.grid-9, .grid-8, .grid-7, .grid-5, .grid-4, .grid-3, .grid-1 {float:left;
+				 									 									 				 overflow:auto;}
+
+.grid-9 {width:720px;}
+.grid-8 {width:640px;}
+.grid-7 {width:560px;}
+.grid-5 {width:400px;}
+.grid-4 {width:320px;}
+.grid-3 {width:240px;}
+.grid-1 {width:80px;}
+
+/* comments list */
+ol.commentlist {margin:12px 20px;
+							 padding:0;
+							 border-style:solid;	
+							 border-color:#242424;	
+							 border-width:1px 1px 0 1px;}
+.commentlist li {list-style:none;
+						  	margin:0;
+								padding:15px 0 0 0;		 
+								border-bottom:1px solid #242424;}
+.commentlist li .comment-info {width:99%;
+						 									margin:0;
+															padding:0;
+															overflow:auto;}
+.commentlist li .comment-info img {float:right;
+						 											margin:0 13px 0 0;		
+																	border:5px solid #1d1a1c;	
+																	display:inline;}
+.commentlist li .comment-info cite {display:block;
+						 											 margin:0;
+																	 padding:5px 65px 5px 20px;
+																	 font-style:normal;
+																	 font-weight:bold;}
+.commentlist li .comment-info cite .comment-data {font-size:.8em;
+						 											 							 font-weight:normal;}
+.commentlist li .comment-text {clear:both;
+						 									margin:0;
+															padding:0 20px 25px 20px;}
+.commentlist li .comment-text p {margin:10px 0 20px 0;
+						 										padding:0;}
+.commentlist li .comment-text .reply a {padding:5px 10px;
+						 												 	 background:#a89907 url(../images/readmore-normal.jpg) repeat-x;
+																			 font-weight:bold;
+																			 font-size:11px;
+																			 color:#fff;}
+.commentlist li .comment-text .reply a:hover {background:#ffc75e url(../images/readmore-hover.jpg) repeat-x;}
+
+.commentlist li ul.children {margin:0;
+						 								padding:0;}
+.commentlist li ul.children li.depth-2,
+.commentlist li ul.children li.depth-3 {margin-left:40px;
+						 													 border-style:solid;
+																			 border-color:#242424;
+																			 border-width:1px 0 0 1px;}
+.commentlist li.thread-alt {background:#0A0605;}
+
+h3#comments, #respond h3 {margin:30px 20px;
+						 						 color:#a89907;
+												 font-family:'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;}
+
+/* form elements */
+#respond form {margin:10px 20px 10px 20px;
+				 			padding:15px 25px 25px 25px;
+							border:1px solid #242424;}
+#respond form p {border-bottom:1px solid #242424;
+				 				margin:0;
+								padding:13px 5px 8px 5px;
+								color:#fff;}
+#respond label {font-weight:bold;
+				 			 color:#f0f0f0;}
+#respond input, select, textarea {margin:5px 0;
+				 												 padding:7px 5px;
+																 border-width:1px;
+																 border-style:solid;
+																 border-color:#242424;
+																 background-color:#050204;
+																 font-family:'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+																 color:#929192;}
+#respond input:focus, select:focus, textarea:focus {background-color:#934A00;
+				 																					 border:1px solid #BF6000;
+																									 color:#fff;}
+#respond #name, #email, #message, #website {width:470px;}
+#respond input.button {margin:0;
+											background:#a89907 url(../images/readmore-normal.jpg) top repeat-x;
+											font-family:'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+											text-decoration:none;
+											color:#fff;
+											font-weight:bold}
+
+/*--------------------------- Header ---------------------------------------*/
+
+#header {border-top:1px solid #242424;
+				border-bottom:1px solid #242424;
+				background:#050204;
+				margin-bottom:10px;}
+				
+/* menu */
+
+#menu {font-weight:bold;
+			position:absolute;
+			top:20px;}
+			
+#menu ul li {float:left;}
+
+#menu ul a {float:left;
+				 	 padding:10px;}
+					 
+#menu ul li.current_page_item a {background:#0d0d0d url(../images/body-bg.gif);
+				 												border-top:none;
+																border-right:1px solid #242424;
+																border-bottom:1px solid #242424;
+																border-left:1px solid #242424;}
+																
+/* searchform */
+
+#searchform {width:300px;
+						height:30px;
+						background:url(../images/searchform.png) no-repeat;
+						float:right;
+						margin:10px 0;}
+						
+#searchform input {float:left;
+									background:none;
+									border:none;
+									font: 12px/150% 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+									color:#929192;}
+									
+#s {width:229px;
+	 padding-left:10px;
+	 padding-top:7px;}
+						
+.screen-reader-text {display:none;}
+
+/*--------------------------- main-content ---------------------------------*/
+
+#logo, #content {margin-right:10px;}
+
+/* logo */
+
+#logo {height:260px;}
+
+#logo p {margin:25px 15px;}				
+
+#logo p.title {font-family:georgia, serif;
+							font-style:italic;
+							font-weight:bold;
+							letter-spacing:-1px;
+							font-size:3em;}
+							
+#logo p.tagline {font-family:georgia, serif;
+								font-style:italic;
+								line-height:1;
+  							margin-bottom:1.5em;
+								font-size:1.5em;}
+
+#logo p.description {color:#f0f0f0;}
+
+/* featured-post and recent-post*/
+
+#featured-block {height:260px;}
+
+#featured-post {margin:35px;}
+							 
+.recent-post {margin:20px 20px 50px 20px;}
+#featured-post p, .recent-post p {margin-bottom:10px;}
+
+#featured-post p.date, .recent-post p.date {margin-bottom:15px;}
+
+#featured-post img {float:left;
+							 		 margin-right:20px;}
+								 
+/* ----------------------------- sidebar -----------------------------------*/
+
+	 				/*adjust if you prefer to align #sidebar and #content divs*/											 
+#sidebar {padding:0 0 13px 0;}
+
+.sidebar-container {margin:20px 20px 10px 20px;}
+
+.sidebar-container p {margin-top:20px;}
+
+.sidebar-container img {border:10px solid #1d1a1c;}
+
+.sidebar-container h3 {font-weight:normal;
+											font-family:'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, Sans-Serif;
+											color:#a89907;}
+						 
+.sidebar-container ul li {border-bottom:none;
+									 			 padding:10px 0 5px 20px;
+												 font-size:11px;
+												 background:url(../images/bullet.gif) no-repeat 0 12px;
+												 font-weight:bold;
+												 text-transform:uppercase;}
+												 
+.sidebar-container ul ul li {border-bottom:1px solid #242424;
+												 font-size:12px;
+												 background:none;
+												 font-weight:normal;
+												 padding:7px 0 5px 0;
+												 text-transform:lowercase;}
+						 
+/* ----------------------------- footer ------------------------------------*/
+
+#footer p {line-height:1.5;
+					margin:1em 0 1em 1em;}
+	

@@ -5,16 +5,14 @@
 {% load static %}
 
 {% block content %}
-<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/style.css' %}" />
-
+<!-- header -->
 <div id="header">
   <div id="header-container" class="container-12 clearfix">
     <div id="menu" class="grid-8">
       <ul>
-        <li class="current_page_item"><a href="index.html">Home</a></li>
-        <li><a href="blog.html">blog</a></li>
-        <li><a href="xhtml-elements.html">xhtml</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Covid 19</a></li>
+        <li class="current_page_item"><a href="xhtml-elements.html">Tracker</a></li>
       </ul>
     </div>
     <!-- searchform *copy/paste this code to place anywhere in the page-->
@@ -22,7 +20,7 @@
       <p>
         <label class="screen-reader-text" for="s">Search for:</label>
         <input type="text" value="Type Your Search Here" name="s" id="s" />
-        <input type="image" id="searchsubmit" value="search" src= "{% static 'images/searchbutton.png' %}"/>
+        <input type="image" id="searchsubmit" value="search" src="{% static 'images/searchbutton.png' %}"/>
       </p>
     </form>
     <!-- end of searchform -->
@@ -53,25 +51,23 @@
     </table>
 
 </div>
-<!-- end of Infomation -->
+<!-- end of header -->
 <div class="clear"></div>
 <!-- main-wrapper -->
 <div id="main-wrapper" class="container-12">
   <!-- logo -->
   <div id="logo" class="grid-3">
     <p class="title"><a href="#">busy</a></p>
-    <p class="tagline">TEMPLEATE</p>
-    <p class="description">Adding discription<span class="more-info"><a href="#">more info</a></span></p>
+    <p class="tagline">Capre Diem</p>
+    <p class="description">TO add more discription <span class="more-info"><a href="#">more info</a></span></p>
   </div>
   <!-- end of logo -->
   <!-- featured-post -->
   <div id="featured-block" class="grid-9">
     <div id="featured-post">
-      <div id="featured-image">
-        <p><img src="{% static 'images/guitar.jpg' %}" alt="" width="297" height="163"/></p>
-      </div>
+      <div id="featured-image"> <img src="{% static 'images/guitar.jpg' %}" alt="" width="297" height="163"/> </div>
       <div id="featured-description">
-        <h2><a href="#">Hypeling</a></h2>
+        <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
         <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
         <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod</a> tempor incididunt ut labore et dolore <a href="#">magna</a> aliqua. Ut enim ad minim <a href="#">veniam</a></p>
         <p><a href="#" class="more-link">read more</a></p>
@@ -81,21 +77,93 @@
   <!-- end of featured post -->
   <div class="clear"></div>
   <!-- content -->
-  <h1>This is Busy WebSite Template</h1>
+  <h1>xHTML Elements</h1>
   <div id="content" class="grid-8">
-    <div class="recent-post clearfix">
-      <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
+    <div class="recent-post">
+      <h2><a href="#">Post with code</a></h2>
       <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-      <p><img src="{% static 'images/road.jpg' %}" alt=""/></p>
-      <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetuer adipiscing elit. Donec libero. <a href="#">Suspendisse bibendum</a>. Cras id urna. Morbi tincidunt, orci ac convallis <a href="#">aliquam</a>, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec <a href="#">placerat</a> bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, <a href="#">lorem tellus,</a> eleifend magna, eget fringilla velit <a href="#">magna</a> id neque.</p>
-      <p><a href="#" class="more-link">read more</a></p>
+      <code> code {padding:20px;<br />
+      text-align:left;<br />
+      display:block;<br />
+      overflow:auto;<br />
+      font-family:'lucida console', 'courier new', monospace;} </code> </div>
+    <div class="recent-post">
+      <h2><a href="#">Post with table</a></h2>
+      <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
+      <table>
+        <tr>
+          <th>post date</th>
+          <th>title</th>
+          <th>description</th>
+        </tr>
+        <tr>
+          <td>08.18.2009</td>
+          <td>Augue non nibh</td>
+          <td>Commodo <a href="#">metus</a> vestibulum hdhdh djdjdj djdjdj</td>
+        </tr>
+        <tr>
+          <td>08.18.2009</td>
+          <td>Fusce ut diam</td>
+          <td>Purus in eget odio in sapien</td>
+        </tr>
+        <tr>
+          <td>08.18.2009</td>
+          <td>Augue non nibh</td>
+          <td>Adipiscing blandit </td>
+        </tr>
+        <tr>
+          <td>08.18.2009</td>
+          <td>Sed vestibulum</td>
+          <td>Cras <a href="#">lobortis</a> commodo </td>
+        </tr>
+      </table>
     </div>
-    <div class="recent-post clearfix">
-      <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
+    <div class="recent-post">
+      <h2><a href="#">Post with cascading ordered and unordered list</a></h2>
       <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-      <p><img src="{% static 'images/car.jpg' %}" alt="" class="alignleft"/></p>
-      <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetuer adipiscing elit. Donec libero. <a href="#">Suspendisse bibendum</a>. Cras id urna. Morbi tincidunt, orci ac convallis <a href="#">aliquam</a>, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec <a href="#">placerat</a> bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, <a href="#">lorem tellus,</a> eleifend magna, eget fringilla velit <a href="#">magna</a> id neque.</p>
-      <p><a href="#" class="more-link">read more</a></p>
+      <h3>Ordered List</h3>
+      <ol>
+        <li> <a href="#">Lorem Ipsum</a>
+          <ol>
+            <li><a href="#">Lorem Ipsum</a>
+              <ol>
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Lorem Ipsum Dolor</a></li>
+                <li><a href="#">Lorem Ipsum</a></li>
+              </ol>
+            </li>
+            <li><a href="#">Lorem Ipsum Dolor</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+          </ol>
+        </li>
+        <li><a href="#">Lorem Ipsum Dolor</a></li>
+        <li><a href="#">Lorem Ipsum</a></li>
+      </ol>
+      <h3>Unordered List</h3>
+      <ul>
+        <li> <a href="#">Lorem Ipsum</a>
+          <ul>
+            <li><a href="#">Lorem Ipsum</a>
+              <ul>
+                <li><a href="#">Lorem Ipsum</a></li>
+                <li><a href="#">Lorem Ipsum Dolor</a></li>
+                <li><a href="#">Lorem Ipsum</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Lorem Ipsum Dolor</a></li>
+            <li><a href="#">Lorem Ipsum</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Lorem Ipsum Dolor</a></li>
+        <li><a href="#">Lorem Ipsum</a></li>
+      </ul>
+    </div>
+    <div class="recent-post">
+      <h2><a href="#">Post with blockquotes</a></h2>
+      <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
+      <blockquote>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+      </blockquote>
     </div>
   </div>
   <!-- end of content -->
@@ -157,7 +225,7 @@
   <div class="clear"></div>
   <!-- footer -->
   <div id="footer">
-    <p>&copy; Copyright 2009 <a href="#">Name Here</a> - All Rights Reserved | Design by <a href="http://tamad.net">Tamad.Net</a></p>
+    <p>&copy; Copyright 2020 <a href="#">Mayur Benodekar </a> - All Rights Reserved | Design by <a>Mayur Benodekar</a></p>
   </div>
   <!-- end of footer -->
 </div>
