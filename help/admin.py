@@ -4,7 +4,7 @@ from .models import information
 
 
 class PersonalInfoAdmin(admin.ModelAdmin):
-    list_display = ('name', 'designation', 'phone')
+    list_display = ('name', 'designation', 'phone', 'email')
 
 
 admin.site.register(information, PersonalInfoAdmin)

@@ -13,8 +13,8 @@
     <div id="menu" class="grid-8">
       <ul>
         <li class="current_page_item"><a href="index.html">Home</a></li>
-        <li><a href="blog.html">blog</a></li>
-        <li><a href="xhtml-elements.html">xhtml</a></li>
+        <li><a href="blog.html">Covid 19 Vaccine Info</a></li>
+        <li><a href="xhtml-elements.html">Carona Tracker</a></li>
       </ul>
     </div>
     <!-- searchform *copy/paste this code to place anywhere in the page-->
@@ -34,8 +34,10 @@
         <thead>
         <tr>
             <th scope="col" >Name</th>
-            <th scope="col" >Phone Number</th>
             <th scope="col" >Designation</th>
+            <th scope="col" >Phone Number</th>
+           <th scope="col" >Email</th>
+
         </tr>
         </thead>
         {% for information in info%}
@@ -45,6 +47,7 @@
                 <td>{{ information.name }}</td>
                 <td>{{ information.designation}}</td>
                 <td>{{ information.phone}}</td>
+              <td>{{ information.email}}</td>
             </tr>
 
         </div>
@@ -157,7 +160,7 @@
   <div class="clear"></div>
   <!-- footer -->
   <div id="footer">
-    <p>&copy; Copyright 2009 <a href="#">Name Here</a> - All Rights Reserved | Design by <a href="http://tamad.net">Tamad.Net</a></p>
+    <p>&copy; Copyright 2020 <a href="#">Mayur Benodekar</a> - All Rights Reserved | Design by Mayur Benodekar</p>
   </div>
   <!-- end of footer -->
 </div>
