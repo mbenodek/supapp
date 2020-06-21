@@ -8,3 +8,13 @@ from .models import information
 def index(request):
     personalInfo = information.objects.all()
     return render(request, 'index.html', {'info': personalInfo})
+
+
+def info(request):
+    return render(request, 'info.html')
+
+
+def tracker(request):
+    return render(request, 'tracker.html')
+
+
