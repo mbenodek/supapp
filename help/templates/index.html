@@ -1,168 +1,173 @@
-
-
 {% extends 'base.html' %}
 
 {% load static %}
 
 {% block content %}
-<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/style.css' %}" />
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/style.css' %}"/>
 
 <div id="header">
-  <div id="header-container" class="container-12 clearfix">
-    <div id="menu" class="grid-8">
-      <ul>
-        <li class="current_page_item"><a href="/index/">Home</a></li>
-        <li><a href="/info/">Covid 19 Vaccine Info</a></li>
-        <li><a href="/tracker/">Carona Tracker</a></li>
-      </ul>
-    </div>
-    <!-- searchform *copy/paste this code to place anywhere in the page-->
-    <form method="get" id="searchform" action="#" >
-      <p>
-        <label class="screen-reader-text" for="s">Search for:</label>
-        <input type="text" value="Type Your Search Here" name="s" id="s" />
-        <input type="image" id="searchsubmit" value="search" src= "{% static 'images/searchbutton.png' %}"/>
-      </p>
-    </form>
-    <!-- end of searchform -->
-  </div>
-</div>
-
-<div class="row" style="width: 500px; margin:0 auto;">
-    <table class="table table-hover table-dark table-sm ">
-        <thead>
-        <tr>
-            <th scope="col" >Name</th>
-            <th scope="col" >Designation</th>
-            <th scope="col" >Phone Number</th>
-           <th scope="col" >Email</th>
-
-        </tr>
-        </thead>
-        {% for information in info%}
-        <div class="col">
-            <tbody>
-            <tr>
-                <td>{{ information.name }}</td>
-                <td>{{ information.designation}}</td>
-                <td>{{ information.phone}}</td>
-              <td>{{ information.email}}</td>
-            </tr>
-
+    <div id="header-container" class="container-12 clearfix">
+        <div id="menu" class="grid-8">
+            <ul>
+                <li class="current_page_item"><a href="/index/">Home</a></li>
+                <li><a href="/info/">Covid 19 Vaccine Info</a></li>
+                <li><a href="/tracker/">Carona Tracker</a></li>
+                <li><a href="/life/">Life Republic Info</a></li>
+            </ul>
         </div>
-        {% endfor %}
-        </tbody>
-    </table>
-
+        <!-- searchform *copy/paste this code to place anywhere in the page-->
+        <form method="get" id="searchform" action="#">
+            <p>
+                <label class="screen-reader-text" for="s">Search for:</label>
+                <input type="text" value="Type Your Search Here" name="s" id="s"/>
+                <input type="image" id="searchsubmit" value="search" src="{% static 'images/searchbutton.png' %}"/>
+            </p>
+        </form>
+        <!-- end of searchform -->
+    </div>
 </div>
-<!-- end of Infomation -->
+
 <div class="clear"></div>
 <!-- main-wrapper -->
 <div id="main-wrapper" class="container-12">
-  <!-- logo -->
-  <div id="logo" class="grid-3">
-    <p class="title"><a href="#">busy</a></p>
-    <p class="tagline">TEMPLEATE</p>
-    <p class="description">Adding discription<span class="more-info"><a href="#">more info</a></span></p>
-  </div>
-  <!-- end of logo -->
-  <!-- featured-post -->
-  <div id="featured-block" class="grid-9">
+    <!-- logo -->
+    <div id="logo">
+        <p class="title "><a href="#">Welcome to the Carona Dashboard </a></p>
+        <p class="tagline user-select-all">All the information related to Covid-19</p>
+        <p class="description user-select-none">COVID-19 affects everyone. Infected people will develop mild to moderate
+            illness and may recover without hospitalization.</p>
+        <a class="btn btn-link" data-toggle="collapse"  href="#multiCollapse1"  role="button" aria-expanded="false" aria-controls="multiCollapse1">Symptoms</a>
+        <a class="btn btn-link" data-toggle="collapse"  href="#multiCollapse2" type="button" aria-expanded="false" aria-controls="multiCollapse2">Preventions</a>
+         <a class="btn btn-link" data-toggle="collapse"  href="#multiCollapse3" type="button" aria-expanded="false" aria-controls="multiCollapse3">Treatments</a>
+
+        <p class="collapse " id="multiCollapse1"  aria-labelledby="logo" data-parent="#main-wrapper">
+            Most common symptoms: &nbsp;fever,&nbsp;dry cough,&nbsp;tiredness</br>
+            Less common symptoms: &nbsp;aches and pains,&nbsp;sore throat,&nbsp;diarrhoea,&nbsp;,conjunctivitis&nbsp;,headache&nbsp;,loss of taste or smell&nbsp;,a rash on skin, or discolouration of fingers or toes
+        </p>
+        <p class="collapse " id="multiCollapse2" aria-labelledby="logo" data-parent="#main-wrapper">
+            Clean your hands often with soap and water, or an alcohol-based hand rub. Maintain a safe distance from everyone.&nbsp;Don’t touch your eyes, nose or mouth.
+            Cover your nose and mouth with your bent elbow  when you cough or sneeze.
+            If having fever, cough and difficulty breathing, seek medical attention &nbsp;
+        </p>
+        <p class="collapse " id="multiCollapse3" aria-labelledby="logo" data-parent="#main-wrapper">
+           If you feel sick take rest, drink plenty of fluid, and eat nutritious food. Stay in a separate room from other family members, and use a dedicated bathroom if possible. Clean and disinfect frequently touched surfaces.
+            It is normal to feel sad, stressed, or confused during a crisis talk to a health worker or counsellor.
+
+        </p>
+
+    </div>
+    <!-- end of logo -->
+</div>
+
+<!-- featured-post -->
+<div id="featured-block" class="grid-9">
     <div id="featured-post">
-      <div id="featured-image">
-        <p><img src="{% static 'images/guitar.jpg' %}" alt="" width="297" height="163"/></p>
-      </div>
-      <div id="featured-description">
-        <h2><a href="#">Hypeling</a></h2>
+        <div id="featured-image">
+            <p><img src="{% static 'images/guitar.jpg' %}" alt="" width="297" height="163"/></p>
+        </div>
+        <div id="featured-description">
+            <h2><a href="#">Hypeling</a></h2>
+            <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
+            <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod</a>
+                tempor incididunt ut labore et dolore <a href="#">magna</a> aliqua. Ut enim ad minim <a
+                        href="#">veniam</a></p>
+            <p><a href="#" class="more-link">read more</a></p>
+        </div>
+    </div>
+</div>
+<!-- end of featured post -->
+<div class="clear"></div>
+<!-- content -->
+<h1>This is Busy WebSite Template</h1>
+<div id="content" class="grid-8">
+    <div class="recent-post clearfix">
+        <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
         <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-        <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod</a> tempor incididunt ut labore et dolore <a href="#">magna</a> aliqua. Ut enim ad minim <a href="#">veniam</a></p>
+        <p><img src="{% static 'images/road.jpg' %}" alt=""/></p>
+        <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetuer adipiscing elit. Donec libero. <a href="#">Suspendisse
+            bibendum</a>. Cras id urna. Morbi tincidunt, orci ac convallis <a href="#">aliquam</a>, lectus turpis varius
+            lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec <a href="#">placerat</a> bibendum, dui pede
+            condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra
+            condimentum, <a href="#">lorem tellus,</a> eleifend magna, eget fringilla velit <a href="#">magna</a> id
+            neque.</p>
         <p><a href="#" class="more-link">read more</a></p>
-      </div>
-    </div>
-  </div>
-  <!-- end of featured post -->
-  <div class="clear"></div>
-  <!-- content -->
-  <h1>This is Busy WebSite Template</h1>
-  <div id="content" class="grid-8">
-    <div class="recent-post clearfix">
-      <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-      <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-      <p><img src="{% static 'images/road.jpg' %}" alt=""/></p>
-      <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetuer adipiscing elit. Donec libero. <a href="#">Suspendisse bibendum</a>. Cras id urna. Morbi tincidunt, orci ac convallis <a href="#">aliquam</a>, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec <a href="#">placerat</a> bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, <a href="#">lorem tellus,</a> eleifend magna, eget fringilla velit <a href="#">magna</a> id neque.</p>
-      <p><a href="#" class="more-link">read more</a></p>
     </div>
     <div class="recent-post clearfix">
-      <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-      <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-      <p><img src="{% static 'images/car.jpg' %}" alt="" class="alignleft"/></p>
-      <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetuer adipiscing elit. Donec libero. <a href="#">Suspendisse bibendum</a>. Cras id urna. Morbi tincidunt, orci ac convallis <a href="#">aliquam</a>, lectus turpis varius lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec <a href="#">placerat</a> bibendum, dui pede condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra condimentum, <a href="#">lorem tellus,</a> eleifend magna, eget fringilla velit <a href="#">magna</a> id neque.</p>
-      <p><a href="#" class="more-link">read more</a></p>
+        <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
+        <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
+        <p><img src="{% static 'images/car.jpg' %}" alt="" class="alignleft"/></p>
+        <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetuer adipiscing elit. Donec libero. <a href="#">Suspendisse
+            bibendum</a>. Cras id urna. Morbi tincidunt, orci ac convallis <a href="#">aliquam</a>, lectus turpis varius
+            lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec <a href="#">placerat</a> bibendum, dui pede
+            condimentum odio, ac blandit ante orci ut diam. Cras fringilla magna. Phasellus suscipit, leo a pharetra
+            condimentum, <a href="#">lorem tellus,</a> eleifend magna, eget fringilla velit <a href="#">magna</a> id
+            neque.</p>
+        <p><a href="#" class="more-link">read more</a></p>
     </div>
-  </div>
-  <!-- end of content -->
-  <!-- sidebar -->
-  <div id="sidebar" class="grid-4">
+</div>
+<!-- end of content -->
+<!-- sidebar -->
+<div id="sidebar" class="grid-4">
     <div class="sidebar-container">
-      <h3>Donate</h3>
-      <p>If you think you like this one, you might want to donate any amount</p>
-    </div>
-    <div class="sidebar-container">
-      <h3>Sponsors</h3>
-      <ul>
-        <li><a href="#">TemplateWorld</a>
-          <ul>
-            <li>High Quality Premium Templates</li>
-            <li>All Templates for $49.95</li>
-            <li>6 months access</li>
-          </ul>
-        </li>
-        <li><a href="#">4templates</a>
-          <ul>
-            <li>High Quality Premium Templates</li>
-            <li>Ready to use, Royalty free</li>
-            <li>As low as $4.99</li>
-          </ul>
-        </li>
-        <li><a href="#">Fotolia</a>
-          <ul>
-            <li>Largest collection of stock photos</li>
-            <li>Starting at $0.14</li>
-          </ul>
-        </li>
-        <li><a href="#">HostGator</a>
-          <ul>
-            <li>Premium WebHosting</li>
-            <li>1 month Hosting trial for $0.01</li>
-            <li>Use code <strong>HGC25</strong></li>
-          </ul>
-        </li>
-      </ul>
+        <h3>Donate</h3>
+        <p>If you think you like this one, you might want to donate any amount</p>
     </div>
     <div class="sidebar-container">
-      <h3>Friends</h3>
-      <ul>
-        <li><a href="#">wpport</a>
-          <ul>
-            <li>Ported and custom wordpress themes</li>
-          </ul>
-        </li>
-        <li><a href="#">Tamad.Net</a>
-          <ul>
-            <li>More minimalist website template</li>
-          </ul>
-        </li>
-      </ul>
+        <h3>Sponsors</h3>
+        <ul>
+            <li><a href="#">TemplateWorld</a>
+                <ul>
+                    <li>High Quality Premium Templates</li>
+                    <li>All Templates for $49.95</li>
+                    <li>6 months access</li>
+                </ul>
+            </li>
+            <li><a href="#">4templates</a>
+                <ul>
+                    <li>High Quality Premium Templates</li>
+                    <li>Ready to use, Royalty free</li>
+                    <li>As low as $4.99</li>
+                </ul>
+            </li>
+            <li><a href="#">Fotolia</a>
+                <ul>
+                    <li>Largest collection of stock photos</li>
+                    <li>Starting at $0.14</li>
+                </ul>
+            </li>
+            <li><a href="#">HostGator</a>
+                <ul>
+                    <li>Premium WebHosting</li>
+                    <li>1 month Hosting trial for $0.01</li>
+                    <li>Use code <strong>HGC25</strong></li>
+                </ul>
+            </li>
+        </ul>
     </div>
-  </div>
-  <!-- end of sidebar -->
-  <div class="clear"></div>
-  <!-- footer -->
-  <div id="footer">
+    <div class="sidebar-container">
+        <h3>Friends</h3>
+        <ul>
+            <li><a href="#">wpport</a>
+                <ul>
+                    <li>Ported and custom wordpress themes</li>
+                </ul>
+            </li>
+            <li><a href="#">Tamad.Net</a>
+                <ul>
+                    <li>More minimalist website template</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- end of sidebar -->
+<div class="clear"></div>
+<!-- footer -->
+<div id="footer">
     <p>&copy; Copyright 2020 <a href="#">Mayur Benodekar</a> - All Rights Reserved | Design by Mayur Benodekar</p>
-  </div>
-  <!-- end of footer -->
+</div>
+<!-- end of footer -->
 </div>
 <!-- end of main-wrapper -->
 {% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div id="header">
+  <div id="header-container" class="container-12 clearfix">
+    <div id="menu" class="grid-8">
+      <ul>
+        <li class="current_page_item"><a href="/index/">Home</a></li>
+        <li><a href="/info/">Covid 19 Vaccine Info</a></li>
+        <li><a href="/tracker/">Carona Tracker</a></li>
+        <li class="current_page_item"><a href="/life/">Life Republic Information</a></li>
+      </ul>
+    </div>
+    <!-- searchform *copy/paste this code to place anywhere in the page-->
+    <form method="get" id="searchform" action="#" >
+      <p>
+        <label class="screen-reader-text" for="s">Search for:</label>
+        <input type="text" value="Type Your Search Here" name="s" id="s" />
+        <input type="image" id="searchsubmit" value="search" src= "{% static 'images/searchbutton.png' %}"/>
+      </p>
+    </form>
+    <!-- end of searchform -->
+  </div>
+</div>
+
+<div class="row" style="width: 500px; margin:0 auto;">
+    <table class="table table-hover table-dark table-sm ">
+        <thead>
+        <tr>
+            <th scope="col" >Name</th>
+            <th scope="col" >Designation</th>
+            <th scope="col" >Phone Number</th>
+           <th scope="col" >Email</th>
+
+        </tr>
+        </thead>
+        {% for information in info%}
+        <div class="col">
+            <tbody>
+            <tr>
+                <td>{{ information.name }}</td>
+                <td>{{ information.designation}}</td>
+                <td>{{ information.phone}}</td>
+              <td>{{ information.email}}</td>
+            </tr>
+
+        </div>
+        {% endfor %}
+        </tbody>
+    </table>
+
+</div>
+<!-- end of Infomation -->
+
+
+{% endblock %}

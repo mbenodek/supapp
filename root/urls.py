@@ -25,6 +25,7 @@ urlpatterns = [
     path('index/', help.views.info, name="index"),
     path('info/', help.views.info, name="info"),
     path('tracker/', help.views.tracker, name="tracker"),
+    path('life/', help.views.life, name="life"),
     path('admin/', admin.site.urls),
 
 ]
