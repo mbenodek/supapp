@@ -1,233 +1,242 @@
-
-
 {% extends 'base.html' %}
 
 {% load static %}
 
 {% block content %}
+
+<script>
+    var d = new Date();
+document.getElementById("demo").innerHTML = d;
+
+
+</script>
+
+
 <!-- header -->
 <div id="header">
-  <div id="header-container" class="container-12 clearfix">
-    <div id="menu" class="grid-8">
-      <ul>
-        <li><a href="/index/">Home</a></li>
-        <li><a href="/info/">Covid 19</a></li>
-        <li class="current_page_item"><a href="/tracker/">Carona Tracker</a></li>
-      </ul>
-    </div>
-    <!-- searchform *copy/paste this code to place anywhere in the page-->
-    <form method="get" id="searchform" action="#" >
-      <p>
-        <label class="screen-reader-text" for="s">Search for:</label>
-        <input type="text" value="Type Your Search Here" name="s" id="s" />
-        <input type="image" id="searchsubmit" value="search" src="{% static 'images/searchbutton.png' %}"/>
-      </p>
-    </form>
-    <!-- end of searchform -->
-  </div>
-</div>
-
-<div class="row" style="width: 500px; margin:0 auto;">
-    <table class="table table-hover table-dark table-sm ">
-        <thead>
-        <tr>
-            <th scope="col" >Name</th>
-            <th scope="col" >Phone Number</th>
-            <th scope="col" >Designation</th>
-        </tr>
-        </thead>
-        {% for information in info%}
-        <div class="col">
-            <tbody>
-            <tr>
-                <td>{{ information.name }}</td>
-                <td>{{ information.designation}}</td>
-                <td>{{ information.phone}}</td>
-            </tr>
-
+    <div id="header-container" class="container-12 clearfix">
+        <div id="menu" class="grid-8">
+            <ul>
+                <li><a href="/index/">Home</a></li>
+                <li><a href="/info/">Covid 19 Vaccine Info</a></li>
+                <li class="current_page_item"><a href="/tracker/">Carona Tracker</a></li>
+            </ul>
         </div>
-        {% endfor %}
-        </tbody>
-    </table>
-
+        <!-- searchform *copy/paste this code to place anywhere in the page-->
+        <form method="get" id="searchform" action="#">
+            <p>
+                <label class="screen-reader-text" for="s">Search for:</label>
+                <input type="text" value="Type Your Search Here" name="s" id="s"/>
+                <input type="image" id="searchsubmit" value="search" src="{% static 'images/searchbutton.png' %}"/>
+            </p>
+        </form>
+        <!-- end of searchform -->
+    </div>
 </div>
+
+
 <!-- end of header -->
 <div class="clear"></div>
 <!-- main-wrapper -->
 <div id="main-wrapper" class="container-12">
-  <!-- logo -->
-  <div id="logo" class="grid-3">
-    <p class="title"><a href="#">busy</a></p>
-    <p class="tagline">Capre Diem</p>
-    <p class="description">TO add more discription <span class="more-info"><a href="#">more info</a></span></p>
-  </div>
-  <!-- end of logo -->
-  <!-- featured-post -->
-  <div id="featured-block" class="grid-9">
-    <div id="featured-post">
-      <div id="featured-image"> <img src="{% static 'images/guitar.jpg' %}" alt="" width="297" height="163"/> </div>
-      <div id="featured-description">
-        <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
-        <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-        <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod</a> tempor incididunt ut labore et dolore <a href="#">magna</a> aliqua. Ut enim ad minim <a href="#">veniam</a></p>
-        <p><a href="#" class="more-link">read more</a></p>
-      </div>
+    <!-- logo -->
+    <div id="logo">
+        <p class="title">India Covid 19 tracker</p>
+        <p class="tagline">Capre Diem -  <span id="date"></span> </p>
+        <script>
+            document.getElementById("date").innerHTML = Date();
+        </script>
+        <p class="description">To check district wise <span class="more-info"><a href="#">click here</a></span></p>
     </div>
-  </div>
-  <!-- end of featured post -->
-  <div class="clear"></div>
-  <!-- content -->
-  <h1>xHTML Elements</h1>
-  <div id="content" class="grid-8">
-    <div class="recent-post">
-      <h2><a href="#">Post with code</a></h2>
-      <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-      <code> code {padding:20px;<br />
-      text-align:left;<br />
-      display:block;<br />
-      overflow:auto;<br />
-      font-family:'lucida console', 'courier new', monospace;} </code> </div>
-    <div class="recent-post">
-      <h2><a href="#">Post with table</a></h2>
-      <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-      <table>
-        <tr>
-          <th>post date</th>
-          <th>title</th>
-          <th>description</th>
-        </tr>
-        <tr>
-          <td>08.18.2009</td>
-          <td>Augue non nibh</td>
-          <td>Commodo <a href="#">metus</a> vestibulum hdhdh djdjdj djdjdj</td>
-        </tr>
-        <tr>
-          <td>08.18.2009</td>
-          <td>Fusce ut diam</td>
-          <td>Purus in eget odio in sapien</td>
-        </tr>
-        <tr>
-          <td>08.18.2009</td>
-          <td>Augue non nibh</td>
-          <td>Adipiscing blandit </td>
-        </tr>
-        <tr>
-          <td>08.18.2009</td>
-          <td>Sed vestibulum</td>
-          <td>Cras <a href="#">lobortis</a> commodo </td>
-        </tr>
-      </table>
+    <!-- end of logo -->
+    <!-- Below code is for India Cases -->
+    <div class="row" style="width: 950px; margin:0 auto;">
+        <table class="table table-hover table-dark ">
+
+            {% for key, value in india_count.items%}
+            <tr>
+                <th> {{ key }}</th>
+                <td> {{ value }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
-    <div class="recent-post">
-      <h2><a href="#">Post with cascading ordered and unordered list</a></h2>
-      <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-      <h3>Ordered List</h3>
-      <ol>
-        <li> <a href="#">Lorem Ipsum</a>
-          <ol>
-            <li><a href="#">Lorem Ipsum</a>
-              <ol>
-                <li><a href="#">Lorem Ipsum</a></li>
+    <!-- end of India Cases -->
+
+    <!-- featured-post -->
+    <div id="featured-block" class="grid-9">
+        <div id="featured-post">
+            <div id="featured-image"><img src="{% static 'images/guitar.jpg' %}" alt="" width="297" height="163"/></div>
+            <div id="featured-description">
+                <h2>To Check stats for the World</h2>
+                <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
+                <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do <a
+                        href="#">eiusmod</a> tempor incididunt ut labore et dolore <a href="#">magna</a> aliqua. Ut enim
+                    ad minim <a href="#">veniam</a></p>
+                <p><a href="#" class="more-link">read more</a></p>
+            </div>
+        </div>
+    </div>
+    <!-- end of featured post -->
+    <div class="clear"></div>
+    <!-- content -->
+    <h1>xHTML Elements</h1>
+    <div id="content" class="grid-8">
+        <div class="recent-post">
+            <h2><a href="#">Post with code</a></h2>
+            <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
+            <code> code {padding:20px;<br/>
+                text-align:left;<br/>
+                display:block;<br/>
+                overflow:auto;<br/>
+                font-family:'lucida console', 'courier new', monospace;} </code></div>
+        <div class="recent-post">
+            <h2><a href="#">Post with table</a></h2>
+            <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
+            <table>
+                <tr>
+                    <th>post date</th>
+                    <th>title</th>
+                    <th>description</th>
+                </tr>
+                <tr>
+                    <td>08.18.2009</td>
+                    <td>Augue non nibh</td>
+                    <td>Commodo <a href="#">metus</a> vestibulum hdhdh djdjdj djdjdj</td>
+                </tr>
+                <tr>
+                    <td>08.18.2009</td>
+                    <td>Fusce ut diam</td>
+                    <td>Purus in eget odio in sapien</td>
+                </tr>
+                <tr>
+                    <td>08.18.2009</td>
+                    <td>Augue non nibh</td>
+                    <td>Adipiscing blandit</td>
+                </tr>
+                <tr>
+                    <td>08.18.2009</td>
+                    <td>Sed vestibulum</td>
+                    <td>Cras <a href="#">lobortis</a> commodo</td>
+                </tr>
+            </table>
+        </div>
+        <div class="recent-post">
+            <h2><a href="#">Post with cascading ordered and unordered list</a></h2>
+            <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
+            <h3>Ordered List</h3>
+            <ol>
+                <li><a href="#">Lorem Ipsum</a>
+                    <ol>
+                        <li><a href="#">Lorem Ipsum</a>
+                            <ol>
+                                <li><a href="#">Lorem Ipsum</a></li>
+                                <li><a href="#">Lorem Ipsum Dolor</a></li>
+                                <li><a href="#">Lorem Ipsum</a></li>
+                            </ol>
+                        </li>
+                        <li><a href="#">Lorem Ipsum Dolor</a></li>
+                        <li><a href="#">Lorem Ipsum</a></li>
+                    </ol>
+                </li>
                 <li><a href="#">Lorem Ipsum Dolor</a></li>
                 <li><a href="#">Lorem Ipsum</a></li>
-              </ol>
-            </li>
-            <li><a href="#">Lorem Ipsum Dolor</a></li>
-            <li><a href="#">Lorem Ipsum</a></li>
-          </ol>
-        </li>
-        <li><a href="#">Lorem Ipsum Dolor</a></li>
-        <li><a href="#">Lorem Ipsum</a></li>
-      </ol>
-      <h3>Unordered List</h3>
-      <ul>
-        <li> <a href="#">Lorem Ipsum</a>
-          <ul>
-            <li><a href="#">Lorem Ipsum</a>
-              <ul>
-                <li><a href="#">Lorem Ipsum</a></li>
+            </ol>
+            <h3>Unordered List</h3>
+            <ul>
+                <li><a href="#">Lorem Ipsum</a>
+                    <ul>
+                        <li><a href="#">Lorem Ipsum</a>
+                            <ul>
+                                <li><a href="#">Lorem Ipsum</a></li>
+                                <li><a href="#">Lorem Ipsum Dolor</a></li>
+                                <li><a href="#">Lorem Ipsum</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Lorem Ipsum Dolor</a></li>
+                        <li><a href="#">Lorem Ipsum</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Lorem Ipsum Dolor</a></li>
                 <li><a href="#">Lorem Ipsum</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Lorem Ipsum Dolor</a></li>
-            <li><a href="#">Lorem Ipsum</a></li>
-          </ul>
-        </li>
-        <li><a href="#">Lorem Ipsum Dolor</a></li>
-        <li><a href="#">Lorem Ipsum</a></li>
-      </ul>
+            </ul>
+        </div>
+        <div class="recent-post">
+            <h2><a href="#">Post with blockquotes</a></h2>
+            <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
+            <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum</p>
+            </blockquote>
+        </div>
     </div>
-    <div class="recent-post">
-      <h2><a href="#">Post with blockquotes</a></h2>
-      <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-      <blockquote>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-      </blockquote>
+    <!-- end of content -->
+    <!-- sidebar -->
+    <div id="sidebar" class="grid-4">
+        <div class="sidebar-container">
+            <h3>Donate</h3>
+            <p>If you think you like this one, you might want to donate any amount</p>
+        </div>
+        <div class="sidebar-container">
+            <h3>Sponsors</h3>
+            <ul>
+                <li><a href="#">TemplateWorld</a>
+                    <ul>
+                        <li>High Quality Premium Templates</li>
+                        <li>All Templates for $49.95</li>
+                        <li>6 months access</li>
+                    </ul>
+                </li>
+                <li><a href="#">4templates</a>
+                    <ul>
+                        <li>High Quality Premium Templates</li>
+                        <li>Ready to use, Royalty free</li>
+                        <li>As low as $4.99</li>
+                    </ul>
+                </li>
+                <li><a href="#">Fotolia</a>
+                    <ul>
+                        <li>Largest collection of stock photos</li>
+                        <li>Starting at $0.14</li>
+                    </ul>
+                </li>
+                <li><a href="#">HostGator</a>
+                    <ul>
+                        <li>Premium WebHosting</li>
+                        <li>1 month Hosting trial for $0.01</li>
+                        <li>Use code <strong>HGC25</strong></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar-container">
+            <h3>Friends</h3>
+            <ul>
+                <li><a href="#">wpport</a>
+                    <ul>
+                        <li>Ported and custom wordpress themes</li>
+                    </ul>
+                </li>
+                <li><a href="#">Tamad.Net</a>
+                    <ul>
+                        <li>More minimalist website template</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-  </div>
-  <!-- end of content -->
-  <!-- sidebar -->
-  <div id="sidebar" class="grid-4">
-    <div class="sidebar-container">
-      <h3>Donate</h3>
-      <p>If you think you like this one, you might want to donate any amount</p>
+    <!-- end of sidebar -->
+    <div class="clear"></div>
+    <!-- footer -->
+    <div id="footer">
+        <p>&copy; Copyright 2020 <a href="#">Mayur Benodekar </a> - All Rights Reserved | Design by <a>Mayur
+            Benodekar</a></p>
     </div>
-    <div class="sidebar-container">
-      <h3>Sponsors</h3>
-      <ul>
-        <li><a href="#">TemplateWorld</a>
-          <ul>
-            <li>High Quality Premium Templates</li>
-            <li>All Templates for $49.95</li>
-            <li>6 months access</li>
-          </ul>
-        </li>
-        <li><a href="#">4templates</a>
-          <ul>
-            <li>High Quality Premium Templates</li>
-            <li>Ready to use, Royalty free</li>
-            <li>As low as $4.99</li>
-          </ul>
-        </li>
-        <li><a href="#">Fotolia</a>
-          <ul>
-            <li>Largest collection of stock photos</li>
-            <li>Starting at $0.14</li>
-          </ul>
-        </li>
-        <li><a href="#">HostGator</a>
-          <ul>
-            <li>Premium WebHosting</li>
-            <li>1 month Hosting trial for $0.01</li>
-            <li>Use code <strong>HGC25</strong></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="sidebar-container">
-      <h3>Friends</h3>
-      <ul>
-        <li><a href="#">wpport</a>
-          <ul>
-            <li>Ported and custom wordpress themes</li>
-          </ul>
-        </li>
-        <li><a href="#">Tamad.Net</a>
-          <ul>
-            <li>More minimalist website template</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <!-- end of sidebar -->
-  <div class="clear"></div>
-  <!-- footer -->
-  <div id="footer">
-    <p>&copy; Copyright 2020 <a href="#">Mayur Benodekar </a> - All Rights Reserved | Design by <a>Mayur Benodekar</a></p>
-  </div>
-  <!-- end of footer -->
+    <!-- end of footer -->
 </div>
 <!-- end of main-wrapper -->
 {% endblock %}
