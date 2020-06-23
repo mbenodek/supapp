@@ -47,9 +47,10 @@ def log_error(e):
 
 
 def get_info_label():
-    URL = 'https://www.mygov.in/covid-19/'
+    URL = 'https://www.mohfw.gov.in/'
     response = simple_get(URL)
     data = BeautifulSoup(response, 'html.parser')
+    print(data)
     key_list = []
     val_list = []
     newdict = dict()
@@ -88,6 +89,5 @@ def send_mail():
 
     print('Hey Email Has been sent')
     server.quit()
-
 
 get_info_label()
