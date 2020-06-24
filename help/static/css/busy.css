@@ -18,6 +18,16 @@ h1 {padding:10px;
 /* images */	 
 
 img {border:10px solid #1d1a1c;}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  .card {
+    display: inline-block;
+  }
+}
 		 
 /* ------------------------------ xHTML Elements ---------------------------*/
 
@@ -365,4 +375,3 @@ h3#comments, #respond h3 {margin:30px 20px;
 
 #footer p {line-height:1.5;
 					margin:1em 0 1em 1em;}
-	

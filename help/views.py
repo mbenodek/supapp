@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import information
 from caronainfo import stats
 import requests
+import json
 
 
 # Create your views here.
@@ -21,7 +22,6 @@ def tracker(request):
     response = requests.get('http://covid-19india-api.herokuapp.com/all')
     # transfor the response to json objects
     india_count = response.json()
-    print(india_count)
     return render(request, 'tracker.html', {'india_count': india_count})
 
     # india_count = stats.get_info_label()

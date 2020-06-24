@@ -9,6 +9,10 @@
 document.getElementById("demo").innerHTML = d;
 
 
+
+
+
+
 </script>
 
 
@@ -43,33 +47,68 @@ document.getElementById("demo").innerHTML = d;
     <!-- logo -->
     <div id="logo">
         <p class="title">India Covid 19 tracker</p>
-        <p class="tagline">Capre Diem -  <span id="date"></span> </p>
+        <p class="tagline">Capre Diem - Today is <span id="date"></span></p>
         <script>
             document.getElementById("date").innerHTML = Date();
         </script>
-        <p class="description">To check district wise <span class="more-info"><a href="#">click here</a></span></p>
+        <div id="logo">
+            <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse1" role="button" aria-expanded="false"
+               aria-controls="multiCollapse1">Active Case</a>
+            <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse2" role="button" aria-expanded="false"
+               aria-controls="multiCollapse2">Confirmed Cases</a>
+            <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse3" role="button" aria-expanded="false"
+               aria-controls="multiCollapse3">Recovered Cases</a>
+            <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse4" role="button" aria-expanded="false"
+               aria-controls="multiCollapse3">Death Cases</a>
+            <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse5" role="button" aria-expanded="false"
+               aria-controls="multiCollapse3">Active Rate</a>
+            <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse6" role="button" aria-expanded="false"
+               aria-controls="multiCollapse3">Recovery Rate</a>
+
+
+            {% for case in india_count %}
+
+            <p class="collapse " id="multiCollapse1" aria-labelledby="logo" data-parent="#main-wrapper">
+                {{ case.active_cases }}
+            </p>
+
+            <p class="collapse " id="multiCollapse2" aria-labelledby="logo" data-parent="#main-wrapper">
+                {{ case.confirmed_cases }}
+            </p>
+            <p class="collapse " id="multiCollapse3" aria-labelledby="logo" data-parent="#main-wrapper">
+                {{ case.recovered_cases }}
+            </p>
+            <p class="collapse " id="multiCollapse4" aria-labelledby="logo" data-parent="#main-wrapper">
+                {{ case.death_cases }}
+            </p>
+            <p class="collapse " id="multiCollapse5" aria-labelledby="logo" data-parent="#main-wrapper">
+                {{ case.active_rate }}
+            </p>
+            <p class="collapse " id="multiCollapse6" aria-labelledby="logo" data-parent="#main-wrapper">
+                {{ case.recovered_rate }}
+            </p>
+
+            {% endfor %}
+
+
+             <p class="description">To check district wise <span class="more-info"><a href="#">click here</a></span></p>
+        </div>
+
+
+
+
     </div>
     <!-- end of logo -->
     <!-- Below code is for India Cases -->
-    <div class="row" style="width: 950px; margin:0 auto;">
-        <table class="table table-hover table-dark ">
 
-            <!-- {% for key, value in india_count.items%}
-            <tr>
-                <th> {{ key }}</th>
-                <td> {{ value }}</td>
-            </tr>
-            {% endfor %} -->
 
-            <ul>
-             {% for case in india_count %}
-             <li>{{ case.active_cases }} - {{ case.confirmed_cases }}</li>
-                 {% endfor %}
-            </ul>
+    <div id="main-wrapper" class="container-12">
+        <!-- logo -->
 
-            </tbody>
-        </table>
+        <!-- end of logo -->
     </div>
+
+
     <!-- end of India Cases -->
 
     <!-- featured-post -->
