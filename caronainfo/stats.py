@@ -4,6 +4,9 @@ from bs4 import BeautifulSoup
 from requests.exceptions import RequestException
 from contextlib import closing
 import smtplib
+import json
+import urllib3
+
 
 headers = {
     "User-Agent": 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML,like Gecko) Chrome/75.0.3770.100 Safari/537.36'}
@@ -47,9 +50,11 @@ def log_error(e):
 
 
 def get_info_label():
-    URL = 'https://www.mohfw.gov.in/'
+   # URL = 'http://covid-19india-api.herokuapp.com/all'
+    URL="https://covidtracking.com/"
     response = simple_get(URL)
-    data = BeautifulSoup(response, 'html.parser')
+
+    data = BeautifulSoup(response, "html.parser")
     print(data)
     key_list = []
     val_list = []
@@ -90,4 +95,4 @@ def send_mail():
     print('Hey Email Has been sent')
     server.quit()
 
-get_info_label()
+#get_info_label()
