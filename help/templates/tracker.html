@@ -54,12 +54,19 @@ document.getElementById("demo").innerHTML = d;
     <div class="row" style="width: 950px; margin:0 auto;">
         <table class="table table-hover table-dark ">
 
-            {% for key, value in india_count.items%}
+            <!-- {% for key, value in india_count.items%}
             <tr>
                 <th> {{ key }}</th>
                 <td> {{ value }}</td>
             </tr>
-            {% endfor %}
+            {% endfor %} -->
+
+            <ul>
+             {% for case in india_count %}
+             <li>{{ case.active_cases }} - {{ case.confirmed_cases }}</li>
+                 {% endfor %}
+            </ul>
+
             </tbody>
         </table>
     </div>
