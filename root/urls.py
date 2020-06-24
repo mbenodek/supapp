@@ -22,7 +22,7 @@ admin.autodiscover()
 
 urlpatterns = [
     path('', help.views.index, name="index"),
-    path('index/', help.views.info, name="index"),
+    path('index/', help.views.index, name="index"),
     path('info/', help.views.info, name="info"),
     path('tracker/', help.views.tracker, name="tracker"),
     path('life/', help.views.life, name="life"),
