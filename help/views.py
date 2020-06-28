@@ -6,11 +6,14 @@ import requests
 import json
 
 
+
 # Create your views here.
 
 
 def index(request):
-    return render(request, 'index.html')
+    headline_resp = requests.get('http://covid-19india-api.herokuapp.com/headlines')
+    news = headline_resp.json()
+    return render(request, 'index.html', {'news': news})
 
 
 def info(request):
@@ -19,9 +22,11 @@ def info(request):
 
 def tracker(request):
     # get the list of todos
-    response = requests.get('http://covid-19india-api.herokuapp.com/all')
+    india_response = requests.get('http://covid-19india-api.herokuapp.com/all')
     # transfor the response to json objects
-    india_count = response.json()
+    india_count = india_response.json()
+    global_count = requests.get('http://covid-19india-api.herokuapp.com/global')
+    gcount = json.loads(global_count.text)
     return render(request, 'tracker.html', {'india_count': india_count})
 
     # india_count = stats.get_info_label()

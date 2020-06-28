@@ -4,17 +4,6 @@
 
 {% block content %}
 
-<script>
-    var d = new Date();
-document.getElementById("demo").innerHTML = d;
-
-
-
-
-
-
-</script>
-
 
 <!-- header -->
 <div id="header">
@@ -50,9 +39,15 @@ document.getElementById("demo").innerHTML = d;
         <p class="tagline">Capre Diem - Today is <span id="date"></span></p>
         <script>
             document.getElementById("date").innerHTML = Date();
+
+
+
+
+
         </script>
+
         <div id="logo">
-            <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse1" role="button" aria-expanded="false"
+            <a class="btn  btn-link" data-toggle="collapse" href="#multiCollapse1" role="button" aria-expanded="false"
                aria-controls="multiCollapse1">Active Case</a>
             <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse2" role="button" aria-expanded="false"
                aria-controls="multiCollapse2">Confirmed Cases</a>
@@ -65,10 +60,8 @@ document.getElementById("demo").innerHTML = d;
             <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse6" role="button" aria-expanded="false"
                aria-controls="multiCollapse3">Recovery Rate</a>
 
-
             {% for case in india_count %}
-
-            <p class="collapse " id="multiCollapse1" aria-labelledby="logo" data-parent="#main-wrapper">
+            <p class="collapse" id="multiCollapse1" aria-labelledby="logo" data-parent="#main-wrapper">
                 {{ case.active_cases }}
             </p>
 
@@ -91,19 +84,73 @@ document.getElementById("demo").innerHTML = d;
             {% endfor %}
 
 
-             <p class="description">To check district wise <span class="more-info"><a href="#">click here</a></span></p>
+            <p class="description">To check State/UT wise <span class="more-info"><a data-toggle="modal" href="#myModal"
+                                                                                     data-target="#myModal">click here</a></span>
+            </p>
+
         </div>
-
-
 
 
     </div>
     <!-- end of logo -->
     <!-- Below code is for India Cases -->
+    <!-- Adding the district level data in the Modal -->
+    <div class="modal fade " id="myModal" role="dialog" >
+        <div class="modal-dialog modal-xl">
+
+            <!-- Modal content-->
+            <div class="modal-content modal-dialog-scrollable modal-xl"  style="background-color:black;">
+                <div class="modal-header">
+                    <button type="button" class="more-link" data-dismiss="modal">&times;</button>
+                    <h1 class="modal-title">State/UT Carona Tracker</h1>
+                </div>
+                <div class="modal-body  modal-xl " style="background-color:grey;">
+
+                    <!--Table-->
+                    <table class="table table-hover table-dark " id="red" style="border:1px solid black;margin-left:auto;margin-right:auto;">
+                        <thead>
+                        <tr >
+                            <th >State/UT</th>
+                            <th >Active Cases</th>
+                            <th >Confirmed</th>
+                            <th>Recovered</th>
+                            <th >Deaths</th>
+                            <th >Active Rate</th>
+                            <th >Death Rate</th>
+                            <th >Recovered Rate</th>
+                        </tr>
+                        </thead>
+
+                        {% for info in india_count %}
+                         {% for test in info.state_data  %}
+                        <div class="col">
+                            <tbody>
+                            <tr >
+                                <td>{{ test.state }}</td>
+                                <td>{{ test.active }}</td>
+                                <td>{{ test.confirmed }}</td>
+                                <td>{{ test.recovered }}</td>
+                                <td>{{ test.deaths }}</td>
+                                <td>{{ test.active_rate }}</td>
+                                <td>{{ test.death_rate }}</td>
+                                <td>{{ test.recovered_rate }}</td>
+
+                            </tr>
+                        </div>
+                        </tbody>
+                        {% endfor %}
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of Model Code -->
 
 
     <div id="main-wrapper" class="container-12">
         <!-- logo -->
+
 
         <!-- end of logo -->
     </div>
@@ -114,12 +161,14 @@ document.getElementById("demo").innerHTML = d;
     <!-- featured-post -->
     <div id="featured-block" class="grid-9">
         <div id="featured-post">
-            <div id="featured-image"><img src="{% static 'images/guitar.jpg' %}" alt="" width="297" height="163"/></div>
+            <div id="featured-image"><img src="{% static 'images/guitar.jpg' %}" alt="" width="297"
+                                          height="163"/></div>
             <div id="featured-description">
                 <h2>To Check stats for the World</h2>
                 <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
                 <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do <a
-                        href="#">eiusmod</a> tempor incididunt ut labore et dolore <a href="#">magna</a> aliqua. Ut enim
+                        href="#">eiusmod</a> tempor incididunt ut labore et dolore <a href="#">magna</a> aliqua.
+                    Ut enim
                     ad minim <a href="#">veniam</a></p>
                 <p><a href="#" class="more-link">read more</a></p>
             </div>
@@ -213,10 +262,14 @@ document.getElementById("demo").innerHTML = d;
             <h2><a href="#">Post with blockquotes</a></h2>
             <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
             <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                    in
                     culpa qui officia deserunt mollit anim id est laborum</p>
             </blockquote>
         </div>

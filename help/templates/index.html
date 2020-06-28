@@ -3,9 +3,32 @@
 {% load static %}
 
 {% block content %}
-<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
-<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/style.css' %}"/>
 
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'style.css' %}"/>
+
+<script>
+
+    var width = $('.ticker-text').width(),
+    containerwidth = $('.ticker-container').width(),
+    left = containerwidth;
+$(document).ready(function(e){
+	function tick() {
+        if(--left < -width){
+            left = containerwidth;
+        }
+        $(".ticker-text").css("margin-left", left + "px");
+        setTimeout(tick, 8);
+      }
+      tick();
+});
+
+
+
+
+
+
+</script>
 <div id="header">
     <div id="header-container" class="container-12 clearfix">
         <div id="menu" class="grid-8">
@@ -28,6 +51,7 @@
     </div>
 </div>
 
+
 <div class="clear"></div>
 <!-- main-wrapper -->
 <div id="main-wrapper" class="container-12">
@@ -37,21 +61,28 @@
         <p class="tagline user-select-all">All the information related to Covid-19</p>
         <p class="description user-select-none">COVID-19 affects everyone. Infected people will develop mild to moderate
             illness and may recover without hospitalization.</p>
-        <a class="btn btn-link" data-toggle="collapse"  href="#multiCollapse1"  role="button" aria-expanded="false" aria-controls="multiCollapse1">Symptoms</a>
-        <a class="btn btn-link" data-toggle="collapse"  href="#multiCollapse2" role="button" aria-expanded="false" aria-controls="multiCollapse2">Preventions</a>
-         <a class="btn btn-link" data-toggle="collapse"  href="#multiCollapse3" role="button" aria-expanded="false" aria-controls="multiCollapse3">Treatments</a>
+        <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse1" role="button" aria-expanded="false"
+           aria-controls="multiCollapse1">Symptoms</a>
+        <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse2" role="button" aria-expanded="false"
+           aria-controls="multiCollapse2">Preventions</a>
+        <a class="btn btn-link" data-toggle="collapse" href="#multiCollapse3" role="button" aria-expanded="false"
+           aria-controls="multiCollapse3">Treatments</a>
 
-        <p class="collapse " id="multiCollapse1"  aria-labelledby="logo" data-parent="#main-wrapper">
+        <p class="collapse " id="multiCollapse1" aria-labelledby="logo" data-parent="#main-wrapper">
             Most common symptoms: &nbsp;fever,&nbsp;dry cough,&nbsp;tiredness</br>
-            Less common symptoms: &nbsp;aches and pains,&nbsp;sore throat,&nbsp;diarrhoea,&nbsp;,conjunctivitis&nbsp;,headache&nbsp;,loss of taste or smell&nbsp;,a rash on skin, or discolouration of fingers or toes
+            Less common symptoms: &nbsp;aches and pains,&nbsp;sore throat,&nbsp;diarrhoea,&nbsp;,conjunctivitis&nbsp;,headache&nbsp;,loss
+            of taste or smell&nbsp;,a rash on skin, or discolouration of fingers or toes
         </p>
         <p class="collapse " id="multiCollapse2" aria-labelledby="logo" data-parent="#main-wrapper">
-            Clean your hands often with soap and water, or an alcohol-based hand rub. Maintain a safe distance from everyone.&nbsp;Don’t touch your eyes, nose or mouth.
-            Cover your nose and mouth with your bent elbow  when you cough or sneeze.
+            Clean your hands often with soap and water, or an alcohol-based hand rub. Maintain a safe distance from
+            everyone.&nbsp;Don’t touch your eyes, nose or mouth.
+            Cover your nose and mouth with your bent elbow when you cough or sneeze.
             If having fever, cough and difficulty breathing, seek medical attention &nbsp;
         </p>
         <p class="collapse " id="multiCollapse3" aria-labelledby="logo" data-parent="#main-wrapper">
-           If you feel sick take rest, drink plenty of fluid, and eat nutritious food. Stay in a separate room from other family members, and use a dedicated bathroom if possible. Clean and disinfect frequently touched surfaces.
+            If you feel sick take rest, drink plenty of fluid, and eat nutritious food. Stay in a separate room from
+            other family members, and use a dedicated bathroom if possible. Clean and disinfect frequently touched
+            surfaces.
             It is normal to feel sad, stressed, or confused during a crisis talk to a health worker or counsellor.
 
         </p>
@@ -59,19 +90,44 @@
     </div>
     <!-- end of logo -->
 </div>
+<script>document.getElementById("date").innerHTML = Date();</script>
 
 <!-- featured-post -->
 <div id="featured-block" class="grid-9">
     <div id="featured-post">
         <div id="featured-image">
-            <p><img src="{% static 'images/guitar.jpg' %}" alt="" width="297" height="163"/></p>
+            <p><img src="{% static 'images/buggsy.jpg' %}" alt="" width="190" height="190"/></p>
         </div>
         <div id="featured-description">
-            <h2><a href="#">Hypeling</a></h2>
-            <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-            <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetur adipisicing elit, sed do <a href="#">eiusmod</a>
-                tempor incididunt ut labore et dolore <a href="#">magna</a> aliqua. Ut enim ad minim <a
-                        href="#">veniam</a></p>
+            <h2><a href="#">Around the World with Covid - 19!!</a></h2>
+            <p class="date">Posted by <a href="#">admin</a> | <span id="date"></span></p>
+
+
+            <!-- Adding Headlines here -->
+
+            <div class="onoffswitch3">
+                <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
+                <label class="onoffswitch3-label" for="myonoffswitch3">
+        <span class="onoffswitch3-inner">
+            <span class="onoffswitch3-active" style="background : grey">
+                 <marquee class="scroll-text">
+                {% for newlines in news.headlines %}
+
+                    <span class="glyphicon glyphicon-forward" >{{ newlines }}</span>
+
+                {% endfor %}
+                 </marquee>
+
+
+                <span class="onoffswitch3-switch">HEADLINES <span class="glyphicon glyphicon-remove"></span></span>
+            </span>
+
+            <span class="onoffswitch3-inactive"><span class="onoffswitch3-switch">SHOW HEADLINES</span></span>
+        </span>
+                </label>
+            </div>
+            <!-- End of headlines here -->
+
             <p><a href="#" class="more-link">read more</a></p>
         </div>
     </div>
@@ -84,7 +140,7 @@
     <div class="recent-post clearfix">
         <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
         <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-        <p><img src="{% static 'images/road.jpg' %}" alt=""/></p>
+        <p><img src="{% static 'images/chursh.jpg' %}" alt="" width="200" height="IMG_3837.jpg"/></p>
         <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetuer adipiscing elit. Donec libero. <a href="#">Suspendisse
             bibendum</a>. Cras id urna. Morbi tincidunt, orci ac convallis <a href="#">aliquam</a>, lectus turpis varius
             lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec <a href="#">placerat</a> bibendum, dui pede
@@ -96,7 +152,7 @@
     <div class="recent-post clearfix">
         <h2><a href="#">Lorem Ipsum Dolor Sit Amet</a></h2>
         <p class="date">Posted by <a href="#">admin</a> | <a href="#">October 22, 2009</a></p>
-        <p><img src="{% static 'images/car.jpg' %}" alt="" class="alignleft"/></p>
+        <p><img src="{% static 'images/house.jpg' %}" width="200" height="IMG_3837.jpg" alt="" class="alignleft"/></p>
         <p>Lorem <a href="#">ipsum</a> dolor sit amet, consectetuer adipiscing elit. Donec libero. <a href="#">Suspendisse
             bibendum</a>. Cras id urna. Morbi tincidunt, orci ac convallis <a href="#">aliquam</a>, lectus turpis varius
             lorem, eu posuere nunc justo tempus leo. Donec mattis, purus nec <a href="#">placerat</a> bibendum, dui pede

@@ -19,6 +19,16 @@ h1 {padding:10px;
 
 img {border:10px solid #1d1a1c;}
 
+/* adding model window */
+
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
+
+/* end model window  */
+
+
 .scrolling-wrapper {
   overflow-x: scroll;
   overflow-y: hidden;
@@ -78,15 +88,19 @@ blockquote {margin:10px 20px;
 /* table elements */
 
 table {border-collapse:collapse;
-			margin:10px 20px;}
+			margin:10px 20px;
+			  position: relative;}
 th, td {text-align:left;
 			 border-width: 1px;
-			 border-style: solid;}
+			 border-style: solid;
+			 position: sticky;}
 th {background-color: #1d1a1c; 
 	 padding:.8em 1em;
 	 border:1px solid #242424;	
 	 font-weight:bold;
-	 color:#fff;}
+	 color:#fff;
+	 position: sticky;
+}
 td {border-color: #242424;
 	 padding:.7em 1em;}
 
@@ -375,3 +389,82 @@ h3#comments, #respond h3 {margin:30px 20px;
 
 #footer p {line-height:1.5;
 					margin:1em 0 1em 1em;}
+
+
+
+/* addign for ticker */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.onoffswitch3
+{
+    position: relative;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+
+.onoffswitch3-checkbox {
+    display: none;
+}
+
+.onoffswitch3-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 0px solid #999999; border-radius: 0px;
+}
+
+.onoffswitch3-inner {
+    display: block; width: 200%; margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s; -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s; transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch3-inner > span {
+    display: block; float: left; position: relative; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: georgia, serif;
+					 font-size:1.5em; font-weight: bold;
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+.onoffswitch3-inner .onoffswitch3-active {
+    padding-left: 10px;
+    background-color: #EEEEEE; color: #FFFFFF;
+}
+
+.onoffswitch3-inner .onoffswitch3-inactive {
+    width: 100px;
+    padding-left: 16px;
+    background-color: black; color: #FFFFFF;
+    text-align: right;
+}
+
+.onoffswitch3-switch {
+    display: block; width: 50%; margin: 0px; text-align: center;
+    border: 0px solid #999999;border-radius: 0px;
+    position: absolute; top: 0; bottom: 0;
+}
+.onoffswitch3-active .onoffswitch3-switch {
+    background: black; left: 0;
+    width: 160px;
+}
+.onoffswitch3-inactive{
+    background: grey; right: 0;
+    width: 20px;
+}
+.onoffswitch3-checkbox:checked + .onoffswitch3-label .onoffswitch3-inner {
+    margin-left: 0;
+}
+
+.glyphicon-remove{
+    padding: 3px 0px 0px 0px;
+    color: #fff;
+    background-color: black;
+    height: 25px;
+    width: 25px;
+    border-radius: 15px;
+    border: 2px solid #fff;
+}
+
+.scroll-text{
+    color: black;
+}
+
+/* end of ticker */
