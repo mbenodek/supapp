@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3893c2a4-1f52-48ea-bcc3-70a8e8b83b34" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/help/static/images/bird.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help/static/images/buggsy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help/static/images/chursh.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help/static/images/football.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help/static/images/house.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help/static/images/plane.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help/static/images/redue.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help/static/images/seen.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help/static/images/sky.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help/static/images/sun.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/help/static/images/tower.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help/static/css/busy.css" beforeDir="false" afterPath="$PROJECT_DIR$/help/static/css/busy.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/help/static/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/help/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/help/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/help/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help/templates/info.html" beforeDir="false" afterPath="$PROJECT_DIR$/help/templates/info.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/help/templates/tracker.html" beforeDir="false" afterPath="$PROJECT_DIR$/help/templates/tracker.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/help/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/help/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/help/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,14 +14,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/help/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="111" column="51" selection-start-line="111" selection-start-column="46" selection-end-line="111" selection-end-column="51" />
+            <state relative-caret-position="1725">
+              <caret line="115" column="60" selection-start-line="115" selection-start-column="43" selection-end-line="115" selection-end-column="60" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#span#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#3;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#marquee#0;n#span#0;n#span#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#3;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,11 +71,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/help/templates/tracker.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="125" column="39" selection-start-line="125" selection-start-column="36" selection-end-line="125" selection-end-column="39" />
+            <state relative-caret-position="138">
+              <caret line="150" column="26" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
@@ -106,8 +88,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/help/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -127,8 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/help/static/css/busy.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="24" selection-start-line="3" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="106">
+              <caret line="422" column="37" selection-start-line="422" selection-start-column="37" selection-end-line="422" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -154,7 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DJANGO_SETTINGS_MODULE</find>
       <find>.png</find>
       <find>.css</find>
       <find>reset</find>
@@ -178,11 +159,13 @@
       <find>table</find>
       <find>css</find>
       <find>busy</find>
-      <find>960</find>
       <find>col</find>
       <find>onoffswitch3-inner</find>
       <find>font</find>
+      <find>glyphicon-forward</find>
       <find>style</find>
+      <find>960</find>
+      <find>wrapper</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -208,14 +191,14 @@
         <option value="$PROJECT_DIR$/root/urls.py" />
         <option value="$PROJECT_DIR$/help/templates/info.html" />
         <option value="$PROJECT_DIR$/help/templates/life.html" />
-        <option value="$PROJECT_DIR$/help/templates/tracker.html" />
         <option value="$PROJECT_DIR$/help/static/css/style.css" />
         <option value="$PROJECT_DIR$/help/static/style.css" />
-        <option value="$PROJECT_DIR$/help/templates/base.html" />
         <option value="$PROJECT_DIR$/help/urls.py" />
         <option value="$PROJECT_DIR$/help/views.py" />
-        <option value="$PROJECT_DIR$/help/static/css/busy.css" />
         <option value="$PROJECT_DIR$/help/templates/index.html" />
+        <option value="$PROJECT_DIR$/help/static/css/busy.css" />
+        <option value="$PROJECT_DIR$/help/templates/base.html" />
+        <option value="$PROJECT_DIR$/help/templates/tracker.html" />
       </list>
     </option>
   </component>
@@ -479,13 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/help/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="55" selection-start-line="22" selection-start-column="55" selection-end-line="22" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/help/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -516,18 +492,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/help/templates/tracker.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="125" column="39" selection-start-line="125" selection-start-column="36" selection-end-line="125" selection-end-column="39" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/help/static/css/reset.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -537,18 +501,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/help/static/css/busy.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="24" selection-start-line="3" selection-end-line="5" selection-end-column="24" />
+        <state relative-caret-position="106">
+          <caret line="422" column="37" selection-start-line="422" selection-start-column="37" selection-end-line="422" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/help/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="111" column="51" selection-start-line="111" selection-start-column="46" selection-end-line="111" selection-end-column="51" />
+        <state relative-caret-position="1725">
+          <caret line="115" column="60" selection-start-line="115" selection-start-column="43" selection-end-line="115" selection-end-column="60" />
           <folding>
             <element signature="n#style#0;n#span#0;n#span#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#marquee#0;n#span#0;n#span#0;n#label#0;n#div#0;n#div#1;n#div#0;n#div#3;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/help/templates/tracker.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="150" column="26" selection-start-line="150" selection-start-column="26" selection-end-line="150" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
